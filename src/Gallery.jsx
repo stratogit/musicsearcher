@@ -42,33 +42,87 @@ class Gallery extends Component {
 
     render() {
         //console.log(this.props);
-        const { tracks } = this.props;
+   
+        
+       
+          var  {tracks}  = this.props;
+     
+      //    var  {items}  = this.props;
+    
+
+
 
         return (
             <div>
-                <p>Most Popular tracks in Finland</p>
-                {tracks.map((track, k) => {
-                    //console.log(track);
-                    const trackImg = track.album.images[1].url;
-                    return (
-                        <div
-                            key={k}
-                            className="track"
-                            onClick={() => this.playAudio(track.preview_url)}
-                        >
+            
+                <div>
+                    <p>Most Popular tracks in Finland</p>
+                    {tracks.map((track, k) => {
+                        //console.log(track);
+                        const trackImg = track.album.images[1].url;
+                        return (
+                            <div
+                                key={k}
+                                className="track"
+                                onClick={() => this.playAudio(track.preview_url)}
+                            >
 
-                            <img
-                                src={trackImg}
-                                className="track-img"
-                                alt="track"
-                            />
-                            <p className="track-text">
-                                {track.name}
-                            </p>
-                        </div>
-                    )
-                })}
+                                <img
+                                    src={trackImg}
+                                    className="track-img"
+                                    alt="track"
+                                />
+                                <div className="track-play">
+                                    <div className="track-p-inner">
+
+                                        {
+                                            this.state.playingUrl === track.preview_url ?
+                                                <span> | | </span> : <span> &#9654;</span>
+
+                                        }
+                                    </div>
+                                </div>
+                                <p className="track-text">
+                                    {track.name}
+                                </p>
+                            </div>
+                        )
+                    })}
+                </div>
+
+{/* 
+                <div>
+                    <p>Most Popular Albums in Ecuador</p>
+                    {items.map((item, k) => {
+                        console.log(item);
+                        const albumImg = item.images[0].url;
+                        return (
+                            <div
+                                key={k}
+                                className="album"
+                            >
+
+                                <img
+                                    src={albumImg}
+                                    className="album-img"
+                                    alt="album"
+                                />
+                                <p className="album-text">
+                                    {item.name}
+                                </p>
+                            </div>
+                        )
+                    })}
+                </div> */}
+
+
+
+
             </div>
+
+
+
+
         )
 
 

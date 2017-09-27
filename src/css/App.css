@@ -105,3 +105,40 @@ body{
     position: absolute;
     bottom: 0;
 }
+
+.track-play{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+
+}
+
+.track-p-inner{
+    position: absolute;
+    text-align:center;
+    font-size: 20px;
+    background-color: black;
+    border-radius: 25px;
+    width: 50px;
+    height: 50px;
+    color: white;
+    padding-top: 10px;
+    margin-left: 40px;
+    margin-top: 40px;
+    opacity: 0;
+}
+
+.track-p-inner:hover{
+    opacity: 0.8;
+    animation-name: fade-in;
+    animation-duration: 0.5s;
+}
+
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 0.8;
+    }
+}

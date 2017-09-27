@@ -10,7 +10,7 @@ class Discs extends Component {
             <div>
                 <p>Most Popular Albums in Ecuador</p>
              {items.map((item, k) => {
-                 console.log(item);
+               //  console.log(item);
                     const albumImg = item.images[0].url;
                     return (
                         <div

@@ -21,7 +21,8 @@ class App extends Component {
         const BASE_URL = 'https://api.spotify.com/v1/search?';
         let FETCH_URL = `${BASE_URL}q=${this.state.query}&type=artist&limit=1`;
         const ALBUM_URL = 'https://api.spotify.com/v1/artists/';
-        var accessCode = 'BQBe0ycNX-mcpu_s8ikSLfuJLgUXXYusYkZKC4i-d_8nbaBhhKDrjIYswBCuAR2lRCACRpwbP27gLSob7O102VCdNf9mLbkcu-TSK6iH5Kk7TJI9qO7SPTD1QdnKtO8kl2zSABZS8otwsU7dnNZ6sL_RnW4Q87DtCInJ&refresh_token=AQDGziFnC5Q7ujLV9gZMTQ_38xoIljOMzYWm6XnTwZPYof6i947j7GY4KoPjJH7twgak3qVpkEyZq2Wab5wNcrt-H4GcdTapFjCw4W8Qlyl1AduQpizPzWt0o2c7AXHN6Q8';
+        //access code changes every 30 min shitty spotify
+        var accessCode = 'BQAE_SWp4oleoRHgLCZ7i-1Nv9sojhaCT2sUBSWWhQ1jPEsrgh9HyY87fwWeTFaAwgt_iY2J8huWgdKmx45wyaiPyg3qr1GVLNuskF9vvxASEzROYwOYav43mX6fN5HND0zrJ5g1vwBf7qJzlCkDo0Y9lZjbqiABuDHk&refresh_token=AQD2tcMin8qi1aucDvTce32dOjB4ITkGoNIl6MXxtY5pjENvZfWTYlozk7lffqzqj5AA8Xol3zmf9NUe9QOujK6h69DvZiNjML_j8rw2zUDhwxTxt67f5LC5cWYIzi-mZxk';
 
         var myOptions = {
             method: 'GET',
@@ -111,7 +112,7 @@ class App extends Component {
                             
                             />
 
-                               <Discs 
+                               <Discs
                                 items={this.state.items}
                             />
                         </div>
